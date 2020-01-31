@@ -3,6 +3,9 @@
     --hair-md: rgb(192, 98, 11);
     --hair-dark: #342a29;
     --state-danger: #df4537;
+    --state-happy: #7ed42c;
+    --state-normal: #dfc637;
+    --state-sad: #206ccf;
   }
   
   body{
@@ -66,7 +69,7 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-
+    
   }
   #nose{
     background-image: url("../img/nose.png");
@@ -84,8 +87,21 @@
     flex-direction: row;
   }
   #necklace{
-    background-color: red;
+    background-color: steelblue;
     grid-area: necklace;
+    position: relative;
+  }
+  #medal {
+    background-color: goldenrod;
+    position: absolute;
+    border-radius: 2em;
+    width: 130px;
+    height: 40px;
+    bottom: -30px;
+    left: 24px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
   }
   #body{	
     background-color: var(--hair);
@@ -159,18 +175,32 @@
     position: absolute;
     z-index: -1;
   }
+  #state {
+    width: 10%;
+  }
+  #state-bar{
+    width: 90%;
+    height: 10vh;
+    position: relative;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+  }
   
- #state-bar{
-   width: 100%;
-   height: 10vh;
-   border: 2px solid black;
-   background-color: var(--state-danger);
-   text-align: center;
-   font-size: 2em;
-   font-weight: bolder;
-   font-stretch: ultra-expanded;
- }
-  
+  #state-text {
+    position: absolute;
+  }
+  #carga {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    text-align: end;
+    padding-right: 20px;
+  }
   @keyframes zoomInOut {
     from, to{
       transform: scale(1.5);
@@ -196,18 +226,45 @@
   .blink{
     animation: blink .5s;
   }
-
+  
   @keyframes shake {
-    from, 50%, to {
+    from, 25%, 50%, 75%, to {
       transform: rotate(0deg);
     }
-    25%, 75% {
+    12%, 38%, 63%, 87%{
       transform: rotate(30deg);
     }
-  
+    
   }
-
+  
   .shake{
     transform-origin: 0 100%;
-    animation: shake 1s;
+    animation: shake 2s;
+  }
+  
+  @keyframes upPaw {
+    from,to{
+      bottom: -10px;
+      left: -25px;
+    }
+    25% {
+      bottom: 190px;
+      left: -110px;
+    }
+    30%,40%,50%,60% {
+      left: -125px;
+      bottom: 190px;
+    }
+    35%,45%,55%,65% {
+      left: -100px;
+      bottom: 190px;
+    }
+    75%{
+      left: -110px;
+      bottom: 190px;
+    }
+  }
+
+  .upPaw {
+    animation: upPaw 3s;
   }

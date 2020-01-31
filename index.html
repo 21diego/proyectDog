@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Robotito</title>
+  <title>HW - Perrito</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.css">
 </head>
@@ -22,8 +21,10 @@
       </div>
       <div id="left-ear"></div>
       <div id="right-ear"></div>
-      <div id="necklace"></div>
-      <div id="medal"></div>
+      <div id="necklace">
+        <div id="medal"></div>
+      </div>
+      
       <div id="body"></div>
       <div id="belly">
         <div id="top-belly"></div>
@@ -42,7 +43,24 @@
     </div>
     <div id="statewrap" class="d-flex flex-wrap">
       <h2 id="state">Estado:</h2>
-      <div id="state-bar">ENOJADO <span id="count">50</span> </div>
+      <div id="state-bar">
+        <div id="state-text"></div>
+        <div id="carga"></div>
+      </div>
+    </div>
+    <div id="name-wrap">
+      <label>Nombre: <input type="text" maxlength="6" id="name-text"></label>
+    </div>
+    <div id="color-wrap">
+      <label>Cambiar color correa: <input type="color" id="colorPick"></label>
+    </div>
+    <div id="trick-wrap">
+      <label>Acciones: 
+        <select name="trick" id="trick-select">
+          <option value="#">Elegir</option>
+          <option value="saludar">Saludar</option>
+        </select>
+      </label>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
