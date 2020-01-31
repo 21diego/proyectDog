@@ -1,0 +1,180 @@
+  :root{
+    --hair: rgb(212, 110, 14);
+    --hair-md: rgb(192, 98, 11);
+    --hair-dark: #342a29;
+  }
+  
+  body{
+    margin: 0;
+  }
+  .container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #panel{
+    width: 85vw;
+    height: 10vh;
+    background: steelblue;
+    padding: 1em;
+  }
+  .background{
+    width: 85vw;
+    background: #B7B7B7;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(9,35px);
+    grid-template-rows: repeat(12,35px);
+    grid-template-areas: 
+    ". . . . . . . . ."
+    ". leftEar head head head head head rightEar ."
+    ". leftEar head head head head head rightEar ."
+    ". leftEar head head head head head rightEar ."
+    ". leftEar head head head head head rightEar ."
+    ". . necklace necklace necklace necklace necklace . ."
+    ". . body body body body body . tail"
+    ". . body body body body body . tail "
+    ". leftLeg leftLeg belly belly belly rightLeg rightLeg tail"
+    ". leftLeg leftLeg belly belly belly rightLeg rightLeg tail"
+    ". leftLeg leftLeg belly belly belly rightLeg rightLeg ."
+    ". leftLeg leftLeg belly belly belly rightLeg rightLeg .";
+    justify-content: center;
+  }
+  #head{
+    background-color: var(--hair);
+    grid-area: head;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #eyes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 25%;
+  }
+  .eye{
+    background-image: url("../img/kawai1.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+  }
+  #nose{
+    background-image: url("../img/nose.png");
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  }
+  #mouth{
+    background: white;
+    width: 68px;
+    height: 15px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+  }
+  #necklace{
+    background-color: red;
+    grid-area: necklace;
+  }
+  #body{	
+    background-color: var(--hair);
+    grid-area: body;
+  }
+  #belly {
+    position: relative;
+    background-color: white;
+    grid-area: belly;
+    
+  }
+  #top-belly{
+    position: absolute;
+    width: 105px;
+    height: 50px;
+    background-color:white;
+    top: -35px;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+  }
+  #left-paw{
+    background-color: var(--hair-md);
+    position: absolute;
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+    bottom: -10px;
+    left: -25px;
+    width: 65px;
+    height: 45px;
+  }
+  #right-paw{
+    background-color: var(--hair-md);
+    position: absolute;
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+    bottom: -10px;
+    right: -25px;
+    width: 65px;
+    height: 45px;
+  }
+  #left-ear{
+    grid-area: leftEar;
+    background-color: #7D443C;
+    border-top-left-radius: 2em;
+  }
+  #right-ear{
+    grid-area: rightEar;
+    background-color: #7D443C;
+    border-top-right-radius: 2em;
+  }
+  #left-leg{
+    grid-area: leftLeg;
+    background: var(--hair);
+    border-top-left-radius: 2em;
+  }
+  #right-leg{
+    grid-area: rightLeg;
+    background: var(--hair);
+    border-top-right-radius: 2em;
+  }
+  
+  #tail{
+    grid-area: tail;
+    background: var(--hair-dark);
+    border-bottom-right-radius: 5em;
+    border-top-left-radius: 5em;
+  }
+  
+ 
+  
+  @keyframes zoomInOut {
+    from, to{
+      transform: scale(1.5);
+    }
+    50%{
+      transform: scale(.5);
+    }
+  }
+  
+  .zoomInOut{
+    animation: zoomInOut 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scaleY(.1);
+    }
+  }
+  ​
+  .blink{
+    animation: blink .5s;
+  }
