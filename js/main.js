@@ -69,13 +69,25 @@ function paintNecklace(){
 
 function accionar(){
   let option = document.querySelector("#trick-select").value;
-  if(document.querySelector("#state-text").textContent=="TRISTE"){
-    alert("no queire");
-  }
-  else if(option == "saludar"){
+  
+  if(option == "saludar"){
     let lpaw = document.querySelector("#left-paw");
     lpaw.classList.add("upPaw");
     window.setTimeout(quitarClase,3200,[lpaw]);
+  }
+  if(option == "bailar"){
+    let lpaw = document.querySelector("#left-paw");
+    let rpaw = document.querySelector("#right-paw");
+    let tail = document.querySelector("#tail");
+    let lear = document.querySelector("#left-ear");
+    lpaw.classList.add("dance");
+    rpaw.classList.add("dancer");
+    tail.classList.add("shake");
+    head.classList.add("dance");
+    upState();
+    window.setTimeout(quitarClase,3200,[lpaw]);
+    window.setTimeout(quitarClase,3200,[rpaw]);
+    window.setTimeout(quitarClase,3200,[tail]);
   }
 }
 
@@ -87,4 +99,4 @@ document.querySelector("#name-text").addEventListener("keyup",function(){
   upState();
 });
 document.querySelector('#colorPick').addEventListener("change",paintNecklace);
-document.querySelector("#trick-select").addEventListener("change",accionar);
+document.querySelector("#btn-accion").addEventListener("click",accionar);

@@ -38,6 +38,8 @@
   .background{
     width: 50%;
     background: #B7B7B7;
+    background-image: url("../img/campoperro.jpg");
+    background-size: cover;
     padding: 1em;
     position: relative;
     z-index: 0;
@@ -236,16 +238,16 @@
   }
   
   @keyframes blink {
-    from{
-      transform: scale(1);
+    from, to{
+      height: 50px;
     }
-    to{
-      transform: scaleY(.1);
+    50%{
+      height: 5px;
     }
   }
   ​
   .blink{
-    animation: blink .5s;
+    animation: blink 1s;
   }
   
   @keyframes shake {
@@ -289,3 +291,59 @@
   .upPaw {
     animation: upPaw 3s;
   }
+
+  @keyframes dance {
+    from,to{
+      bottom: -10px;
+      left: -25px;
+    }
+    25% {
+      bottom: 190px;
+      left: -110px;
+    }
+    30%,40%,50%,60% {
+      left: -125px;
+    }
+    35%,45%,55%,65% {
+      left: -100px;
+    }
+    75%{
+      left: -110px;
+    }
+  }
+
+  .dance {
+    animation: dance 3s;
+  }
+
+  .dance-ear{
+    position: absolute;
+
+  }
+
+
+  @keyframes dancer {
+    from,to{
+      bottom: -10px;
+      right: -25px;
+    }
+    25% {
+      bottom: 190px;
+      right: -110px;
+    }
+    30%,40%,50%,60% {
+      right:  -125px;
+    }
+    35%,45%,55%,65% {
+      right:  -100px;
+    }
+    75%{
+      right:  -110px;
+    }
+  }
+
+  .dancer {
+    animation: dancer 3s;
+  }
+
+  

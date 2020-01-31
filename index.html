@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>HW - Perrito</title>
   <meta charset="UTF-8">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="container">
     <header class="d-flex">
@@ -16,11 +18,11 @@
     </header>
   </div>
   <div class="container d-flex">
-    <div class="background col-md-6">
+    <div class="background col-md-6" id="cuerpo">
       <div id="head">
         <div id="eyes">
-          <div class="eye"></div>
-          <div class="eye"></div>
+          <div class="eye" id="leye"></div>
+          <div class="eye" id="reye"></div>
         </div>
         <div id="nose"></div>
         <div id="mouth"></div>
@@ -40,6 +42,7 @@
       <div id="left-leg"></div>
       <div id="right-leg"></div>
       <div id="tail"></div>
+      <div id="mensaje"></div>
       <!--<div id="panel">
         <label>Enter a color:
           <input type="color" name="color">
@@ -62,18 +65,22 @@
         <label>Cambiar color correa: <input type="color" id="colorPick"></label>
       </div>
       <div id="trick-wrap">
-        <label>Acciones: 
+        <label>Acciones:
           <select name="trick" id="trick-select">
             <option value="#">Elegir</option>
             <option value="saludar">Saludar</option>
+            <option value="bailar">Bailar</option>
           </select>
+          <input type="button" id="btn-accion" value="Activar">
         </label>
       </div>
     </div>
     
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
