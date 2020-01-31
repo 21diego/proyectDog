@@ -14,14 +14,25 @@ function charge(){
   if(state >= 70){
     carga.style.backgroundColor = "#7ed42c";
     stateText.innerHTML = "FELIZ";
+    document.querySelector("#mouth").style.borderBottomLeftRadius= "1.2em";
+    document.querySelector("#mouth").style.borderBottomRightRadius= "1.2em";
+    document.querySelector("#mouth").style.height= "30px";
   }
   else if(state >= 40){
     carga.style.backgroundColor = "#dfc637";
     stateText.innerHTML = "NORMAL";
+    document.querySelector("#mouth").style.borderTopLeftRadius= "0";
+    document.querySelector("#mouth").style.borderTopRightRadius= "0";
+    document.querySelector("#mouth").style.borderBottomLeftRadius= "0";
+    document.querySelector("#mouth").style.borderBottomRightRadius= "0";
+    document.querySelector("#mouth").style.height= "15px";
   }
   else {
     carga.style.backgroundColor = "#206ccf";
     stateText.innerHTML = "TRISTE";
+    document.querySelector("#mouth").style.borderTopLeftRadius= "1.2em";
+    document.querySelector("#mouth").style.borderTopRightRadius= "1.2em";
+    document.querySelector("#mouth").style.height= "20px";
   }
 }
 
@@ -58,7 +69,10 @@ function paintNecklace(){
 
 function accionar(){
   let option = document.querySelector("#trick-select").value;
-  if(option == "saludar"){
+  if(document.querySelector("#state-text").textContent=="TRISTE"){
+    alert("no queire");
+  }
+  else if(option == "saludar"){
     let lpaw = document.querySelector("#left-paw");
     lpaw.classList.add("upPaw");
     window.setTimeout(quitarClase,3200,[lpaw]);

@@ -13,9 +13,14 @@
   }
 
   #logo-pikachu{
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url("../img/pikachumeme.png");
-    width: 25%;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: 350px;
   }
   /*.container{
     display: flex;
