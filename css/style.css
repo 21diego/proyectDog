@@ -2,6 +2,7 @@
     --hair: rgb(212, 110, 14);
     --hair-md: rgb(192, 98, 11);
     --hair-dark: #342a29;
+    --state-danger: #df4537;
   }
   
   body{
@@ -21,9 +22,11 @@
     padding: 1em;
   }
   .background{
-    width: 85vw;
+    width: 50%;
     background: #B7B7B7;
     padding: 1em;
+    position: relative;
+    z-index: 0;
     display: grid;
     grid-template-columns: repeat(9,35px);
     grid-template-rows: repeat(12,35px);
@@ -149,9 +152,24 @@
     background: var(--hair-dark);
     border-bottom-right-radius: 5em;
     border-top-left-radius: 5em;
+    width: 35px;
+    height: 150px;
+    left: -15px;
+    bottom: 10px;
+    position: absolute;
+    z-index: -1;
   }
   
- 
+ #state-bar{
+   width: 100%;
+   height: 10vh;
+   border: 2px solid black;
+   background-color: var(--state-danger);
+   text-align: center;
+   font-size: 2em;
+   font-weight: bolder;
+   font-stretch: ultra-expanded;
+ }
   
   @keyframes zoomInOut {
     from, to{
@@ -177,4 +195,19 @@
   ​
   .blink{
     animation: blink .5s;
+  }
+
+  @keyframes shake {
+    from, 50%, to {
+      transform: rotate(0deg);
+    }
+    25%, 75% {
+      transform: rotate(30deg);
+    }
+  
+  }
+
+  .shake{
+    transform-origin: 0 100%;
+    animation: shake 1s;
   }
