@@ -10,7 +10,13 @@
 </head>
 <body>
   <div class="container">
-    <div class="background">
+    <header class="d-flex">
+      <h1>HELLO WORLD!</h1>
+      <div id="logo-pikachu"></div>
+    </header>
+  </div>
+  <div class="container d-flex">
+    <div class="background col-md-6">
       <div id="head">
         <div id="eyes">
           <div class="eye"></div>
@@ -41,27 +47,30 @@
         <button id="paint-reset" onclick="location.reload()">Reset</button>
       </div>-->
     </div>
-    <div id="statewrap" class="d-flex flex-wrap">
-      <h2 id="state">Estado:</h2>
-      <div id="state-bar">
-        <div id="state-text"></div>
-        <div id="carga"></div>
+    <div class="panel col-md-6">
+      <div id="statewrap">
+        <h2 id="state">Estado:</h2>
+        <div id="state-bar">
+          <div id="state-text"></div>
+          <div id="carga"></div>
+        </div>
+      </div>
+      <div id="name-wrap">
+        <label>Nombre: <input type="text" maxlength="6" id="name-text"></label>
+      </div>
+      <div id="color-wrap">
+        <label>Cambiar color correa: <input type="color" id="colorPick"></label>
+      </div>
+      <div id="trick-wrap">
+        <label>Acciones: 
+          <select name="trick" id="trick-select">
+            <option value="#">Elegir</option>
+            <option value="saludar">Saludar</option>
+          </select>
+        </label>
       </div>
     </div>
-    <div id="name-wrap">
-      <label>Nombre: <input type="text" maxlength="6" id="name-text"></label>
-    </div>
-    <div id="color-wrap">
-      <label>Cambiar color correa: <input type="color" id="colorPick"></label>
-    </div>
-    <div id="trick-wrap">
-      <label>Acciones: 
-        <select name="trick" id="trick-select">
-          <option value="#">Elegir</option>
-          <option value="saludar">Saludar</option>
-        </select>
-      </label>
-    </div>
+    
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>

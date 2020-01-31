@@ -11,6 +11,12 @@
   body{
     margin: 0;
   }
+
+  #logo-pikachu{
+    background-image: url("../img/pikachumeme.png");
+    width: 25%;
+    height: auto;
+  }
   /*.container{
     display: flex;
     flex-flow: column nowrap;
@@ -175,12 +181,18 @@
     position: absolute;
     z-index: -1;
   }
+  #statewrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
   #state {
     width: 10%;
+    font-size: 2em;
   }
   #state-bar{
-    width: 90%;
-    height: 10vh;
+    width: 75%;
+    height: 50px;
     position: relative;
     border: 2px solid black;
     text-align: center;
@@ -200,6 +212,10 @@
     z-index: -1;
     text-align: end;
     padding-right: 20px;
+  }
+
+  label {
+    font-size: 2em;
   }
   @keyframes zoomInOut {
     from, to{
